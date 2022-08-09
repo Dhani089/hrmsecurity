@@ -1,0 +1,21 @@
+spring:
+  application:
+    name: hrm-security-service
+server:
+  port: 8182
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    serviceUrl:
+      defaultZone : http://${eureka.instance.hostname}:8762/eureka/
+    register-with-eureka: true
+    fetch-registry: true    
+      
+jwt:
+  secret: javainuse
+  get: 
+    token:
+      uri :sss/authenticate
+
+      
